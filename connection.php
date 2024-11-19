@@ -7,9 +7,12 @@ $dbname = 'tgs_inventory';
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn->setAttribute(PDO::ATTR_ERRMODE,asdasd PDO::ERRMODE_EXCEPTION);
     
 } catch(PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
+catch(PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
 }
 ?>
